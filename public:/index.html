@@ -1,0 +1,60 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Gemini Exam Assistant</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gemini AI Exam Assistant</h1>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div id="conversation" class="conversation"></div>
+                
+                <div class="input-area">
+                    <textarea id="userInput" 
+                        name="userInput" 
+                        rows="4" 
+                        placeholder="Ask Gemini about your exam topics..."></textarea>
+                    <button id="submit">Send</button>
+                </div>
+                
+                <div class="options">
+                    <button id="clearChat">Clear Chat</button>
+                    <button id="saveChat">Save Chat</button>
+                    <label>
+                        <input type="checkbox" id="keepContext" checked>
+                        Maintain conversation context
+                    </label>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-box">
+                    <h3>Recent Questions</h3>
+                    <ul id="recentQuestions" class="recent-list"></ul>
+                </div>
+                
+                <div class="feature-box">
+                    <h3>Study Topics</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag" data-topic="Definitions">Definitions</span>
+                        <span class="topic-tag" data-topic="Formulas">Formulas</span>
+                        <span class="topic-tag" data-topic="Examples">Examples</span>
+                        <span class="topic-tag" data-topic="Practice Problems">Practice</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/frontendScript.js"></script>
+</body>
+</html>
